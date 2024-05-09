@@ -25,7 +25,7 @@ export interface Video {
   description?: string
 }
 
-async function getVideo(videoId: string) {
+export async function getVideo(videoId: string) {
  const snapshot = await firestore.collection(videoCollectionId).doc(videoId).get(); // use await because we dont want to return the data until this line has executed
  return (snapshot.data() as Video) ?? {};
 }
@@ -40,4 +40,9 @@ export function setVideo(videoId: string, video: Video) {
 export async function isVideoNew(videoId: string) {
     const video = await getVideo(videoId);
     return video?.status === undefined;
+}
+
+export async function deleteVideoFromFirestore(videoId: string){
+  const res = await firestore.collection(videoCollectionId).doc(videoId).delete();
+  return res
 }
