@@ -2,10 +2,13 @@
   display: none; /* Hide the default input */
 }
 
-.uploadButton {
-  display: flex; /* Use Flexbox to center the text */
-  justify-content: center; /* Center text horizontally */
-  align-items: center; /* Center text vertically */
+.fileInputContainer {
+
+}
+.fileInputLabel {
+  /* display: flex; 
+  justify-content: center;
+  align-items: center;  */
   width: 25px;
   height: 25px;
   border-radius: 50%; /* Make it circular */
@@ -14,9 +17,10 @@
   cursor: pointer;
   font-size: 10px;
   padding: 0.4em;
+  /* margin-top: 5px; */
 }
 
-.uploadButton:hover {
+.fileInputLabel :hover {
   background-color: rgb(230, 230, 230);
 }
 
@@ -35,12 +39,13 @@
 .uploadLabel {
   font-weight: bold;
   display: flex;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+}
+.fileSpan {
+  /* margin-top: 5px; */
 }
 .uploadInput[type="text"],
-.uploadInput[type="email"],
-.uploadInput[type="number"],
-.uploadInput[type="date"] {
+.uploadInput[type="file"]{
   display: block;
   width: 400px;
   padding: 6px 12px;
@@ -50,29 +55,44 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.upload_h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+.uploadInput#description {
+  display: block;
+  width: 400px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  height: 250px;
+  
+ 
+  
 }
 
+
+
 .upload_button {
+  font-family: monospace;
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  /* background-color: #1a1a1a; */
-  cursor: pointer;
-  transition: border-color 0.25s;
+  width: 100px;
+  height: 45px;
+  transition: .3s;
+  display: inline-block; /* Ensure buttons are displayed in a line */
+  vertical-align: middle; /* Center buttons vertically */
+  margin-left: 10px; /* Add space between buttons */
 }
 .upload_button:hover {
-  border-color: #646cff;
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
 }
-.upload_button:focus,
-.upload_button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 .error {
   color: red;
@@ -80,8 +100,53 @@
   text-align: left;
 }
 
-.form-control {
+.form_control {
   margin-bottom: 20px;
+}
+
+
+.customFileUpload {
+  height: 200px;
+  width: 380px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cacaca;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+}
+
+.customFileUpload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customFileUpload .icon svg {
+  height: 80px;
+  /* fill: rgba(75, 85, 99, 1); */
+}
+
+.customFileUpload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customFileUpload .text span {
+  font-weight: 400;
+  color: rgba(75, 85, 99, 1);
+}
+
+.customFileUpload input {
+  display: none;
 }
 
 /* @media (prefers-color-scheme: light) {

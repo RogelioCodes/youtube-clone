@@ -4,4 +4,30 @@
     align-items: center;
     padding: 1em;
 }
-
+.buttonContainer {
+    display: inline-block; /* Ensure buttons are displayed in a line */
+}
+.uploadButton {
+    
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+    display: inline-block; /* Ensure buttons are displayed in a line */
+    vertical-align: middle; /* Center buttons vertically */
+    margin-left: 10px; /* Add space between buttons */
+  }
+.uploadButton svg {
+    width: 30px;
+    height: 30px;
+}
+.uploadButton:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+  }
+  
